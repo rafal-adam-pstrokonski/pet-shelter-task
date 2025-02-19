@@ -16,37 +16,16 @@ $pets = json_decode($response, true);
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+<!-- LOAD CSS -->
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/buttons.css">
+<!-- ######################## -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schronisko PR</title>
     <style>
-        /* Buttons */
-        .button {
-            background: linear-gradient(135deg, #4caf50, #2e7d32);
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .button:hover {
-            background: linear-gradient(135deg, #43a047, #1b5e20);
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .button:active {
-            transform: scale(0.98);
-        }
-
-        .button:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5);
-        }
+        
 
         /* Inputs and Dropdowns */
         input, select {
@@ -179,12 +158,15 @@ $pets = json_decode($response, true);
 
 </head>
 <body>
+    <div class="navbar">
+        <a href="/home">Home</a>
+        <a href="/contact">Contact</a>
+        <a href="/login">Login</a>
+        <a href="/search">Search</a>
+    </div>
+
     <div class="container">
-        <!--
-        <div class='filters'>
-            <p>Logowanie dla opiekunów</p><button onclick="window.location.href='login.php'">Login</button>
-        </div>
-        -->
+        
         <div class='filters'>
             <h1>Schronisko P & R wita!</h1>
             <p>Kontakt email: pet.shelter.task@outlook.com | <a href="mailto:pet.shelter.task@outlook.com?&subject=#Dostępność&body=Proszę o przesłanie dostępności zwierząt:%0AGatunek: %0AImię: %0A%0APozdrawiam">Zapytaj o dostępność</a></p>
@@ -245,6 +227,12 @@ $pets = json_decode($response, true);
                 </div>
             <?php endforeach; ?>
         </div>
+    </div>
+    <div class="navbarFooter">
+        <a href="/home">Home</a>
+        <a href="/contact">Contact</a>
+        <a href="/login">Login</a>
+        <a href="/search">Search</a>
     </div>
 </body>
 </html>
