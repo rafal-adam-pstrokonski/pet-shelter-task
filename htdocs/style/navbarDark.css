@@ -1,23 +1,11 @@
 .navbar {
-    background-color: #4caf50;
+    background-color: #333;
     overflow: hidden;
     display: flex;
     justify-content: center;
     padding: 10px 0;
     position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-.navbarFooter {
-    background-color: #4caf50;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -30,11 +18,14 @@
     font-weight: bold;
     transition: background 0.3s;
 }
+
 .navbar a:hover {
-    background-color: #45a049;
+    background-color: #555; 
     border-radius: 8px;
 }
 body {
     /* Ensure content is not hidden behind fixed navbar */
     padding-top: 60px; 
+    font-size: 18px;
+    font-weight: bold;
 }

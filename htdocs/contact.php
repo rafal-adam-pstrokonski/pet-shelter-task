@@ -17,7 +17,8 @@ $pets = json_decode($response, true);
 <html lang="pl">
 <head>
 <!-- LOAD CSS -->
-    <link rel="stylesheet" href="./style/navbarDark.css">
+<!-- LOAD CSS -->
+<link rel="stylesheet" href="./style/navbarDark.css">
     <link rel="stylesheet" href="./style/buttons.css">
     <link rel="stylesheet" href="./style/formFields.css">
     <link rel="stylesheet" href="./style/pet.css">
@@ -44,11 +45,12 @@ $pets = json_decode($response, true);
     }
     
     </style>
+
 <!-- ######################## -->
 
-
+<!-- LOAD JavaScript -->
+    <script src="./js/search.js"></script>
     <script src="./js/fadeIn.js"></script>
-   
 <!-- ######################## -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,36 +59,20 @@ $pets = json_decode($response, true);
 </head>
 <body>
     <?php echo file_get_contents('components/navbar.php'); ?>
-    
-    <div class="container fade-in-section">
+
+    <div class="container">
+        
         <div class='filters fade-in-section'>
             <h1>Schronisko P & R wita!</h1>
             <p>Kontakt email: pet.shelter.task@outlook.com | <a href="mailto:pet.shelter.task@outlook.com?&subject=#Dostępność&body=Proszę o przesłanie dostępności zwierząt:%0AGatunek: %0AImię: %0A%0APozdrawiam">Zapytaj o dostępność</a></p>
         </div>
-
         
-        <div class='filters fade-in-section' style="text-align: left;">
-            <h1 class='fade-in-section' style="text-align: center">O NAS</h1>
-            <p class='fade-in-section' >
-                Schronisko P & R to miejsce, gdzie zwierzęta znajdują nowy dom i szansę na lepsze życie. 
-                Nasza misja to nie tylko zapewnienie opieki i schronienia dla bezdomnych zwierząt, ale także 
-                edukowanie społeczności na temat odpowiedzialności za zwierzęta i promowanie adopcji.
-            </p>
-            <p class='fade-in-section' >
-                Zespół naszego schroniska składa się z pasjonatów, którzy z oddaniem dbają o każdy szczegół
-                – od opieki weterynaryjnej po codzienne potrzeby zwierząt. Codziennie staramy się, aby każde zwierzę
-                czuło się bezpiecznie i kochane, a także przygotowujemy je na nowe życie w rodzinie.
-            </p>
-            <p class='fade-in-section' >
-                Nasz cel to nie tylko zapewnienie miejsca, ale także szukanie idealnych opiekunów, którzy zaoferują
-                zwierzakom miłość i troskę. Każdego dnia walczymy o to, by zbliżyć się do pełnej adopcji zwierząt w 
-                naszym schronisku. Dołącz do nas w tej misji!
-            </p>
-        </div>
 
-
+    
         
     </div>
+
     <?php echo file_get_contents('components/footer.php'); ?>
+    
 </body>
 </html>

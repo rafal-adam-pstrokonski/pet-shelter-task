@@ -1,0 +1,22 @@
+.pet { 
+    display: flex; 
+    align-items: center; 
+    border: 1px solid #ddd; 
+    padding: 15px; 
+    margin: 10px; 
+    border-radius: 10px; 
+    background: rgba(210,210,210,0.85); 
+    cursor: pointer; 
+}
+.pet img { 
+    width: 140px; 
+    height: 140px; 
+    border-radius: 50%; 
+    margin-right: 15px; 
+}
+.pet-details { 
+    text-align: left; 
+}
+.pet strong { 
+    font-size: 1.2em; 
+}
