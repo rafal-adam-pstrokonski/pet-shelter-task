@@ -1,0 +1,34 @@
+body {
+    padding-bottom: 60px;
+}
+.navbarFooter {
+    overflow: hidden;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: #333; 
+    padding: 10px 0;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-left 20s linear infinite;
+}
+
+.scrolling-wrapper span {
+    margin-right: 20px;
+    color: white; /* Możesz zmienić kolor tekstu */
+    font-size: 16px; /* Dopasuj rozmiar czcionki */
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
