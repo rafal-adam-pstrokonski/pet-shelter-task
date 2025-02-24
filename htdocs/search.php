@@ -2,7 +2,7 @@
 $apiUrl = "https://x8ki-letl-twmt.n7.xano.io/api:iPSUkxr_/pet";
 
 // Calculate the date of last week (7 days ago)
-$lastWeek = date("Y-m-d", strtotime("-7 days"));
+$lastWeek = date("Y-m-d", strtotime("-12 days"));
 
 // Fetch pets created from last week
 $ch = curl_init();
