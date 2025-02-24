@@ -1,6 +1,17 @@
 # 🐾 Pet Shelter App
 
 Welcome to the **Pet Shelter App**! This platform allows you to browse available pets and make reservations to adopt your future furry friend. 
+## Architecture
+This repository contains the PHP frontend application.
+Backend is a powered by XANO.
+
+Models:
+![image](https://github.com/user-attachments/assets/3548dc12-7860-40eb-a024-c5f21c8e2844)
+
+API:
+[models](https://x8ki-letl-twmt.n7.xano.io/api:iPSUkxr_#/)
+[auth](https://x8ki-letl-twmt.n7.xano.io/api:gTVuShjQ)
+
 
 ## 🚀 Features
 - 🏠 Browse available pets for adoption
