@@ -27,6 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // echo $result;
         if (in_array($status_code, [200, 201, 202])) {
             echo "<p class='pet' style='color:green;'>Logged in successfuly!</p>";
+            session_start();
+            $_SESSION["authToken"] = $result['authToken'];
+
         } else {
             echo "<p class='pet' style='color:red;'>Could not log in."; 
             echo htmlspecialchars($result['message']); 
@@ -104,32 +107,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <?php echo file_get_contents('components/navbar.php'); ?>
     <div class="container">
-        
-        <div class='filters fade-in-section'>
-            <h1>Witamy!</h1>
-        </div>
-        
-        <div class='filters fade-in-section' style="text-align: left">
-            <form method='POST'>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="password">Hasło:</label>
-                    <input type="password" id="password" name="password" required>    
-                </div>
-                <div>
-                    <button class='button' type="submit">Log In</button>
-                    
-                </div>
-                
-            </form>
-            <div style='text-align: center;'>
-                <br>
-                <a href='/signUp.php'>Nie masz jeszcze konta?</a>
+        <?php if ( isset($_SESSION) ): ?>
+
+            <div class='filters fade-in-section'>
+                <h1>Witamy! <a href="index.php">Przejdź na główną</a></h1>
             </div>
-        </div>
+
+        <?php else: ?>
+
+            <div class='filters fade-in-section' style="text-align: left">
+                <form method='POST'>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="password">Hasło:</label>
+                        <input type="password" id="password" name="password" required>    
+                    </div>
+                    <div>
+                        <button class='button' type="submit">Log In</button>
+                        
+                    </div>
+                    
+                </form>
+                <div style='text-align: center;'>
+                    <br>
+                    <a href='/signUp.php'>Nie masz jeszcze konta?</a>
+                </div>
+            </div>
+
+        <?php endif; ?>
+
         
     </div>
     <?php echo file_get_contents('components/footer.php'); ?>

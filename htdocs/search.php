@@ -1,4 +1,5 @@
 <?php
+session_start();
 $apiUrl = "https://x8ki-letl-twmt.n7.xano.io/api:iPSUkxr_/pet";
 
 // Calculate the date of last week (7 days ago)
@@ -106,7 +107,17 @@ $pets = json_decode($response, true);
                                 $statusColor = 'red';
                             }
                         ?>
-                        <p style="color: <?= $statusColor ?>">Status: <?= htmlspecialchars($pet['_petadoptionstatus']['displayText'] ?? 'Nieznana') ?></p>
+                        <?php if ( isset($_SESSION) ): ?>
+                            <p style="color: <?= $statusColor ?>">
+                                Status
+                                <select name="status_new" id="status_new" value=<?= htmlspecialchars($pet['_petadoptionstatus']['id'] ?? 'Nieznana') ?>>
+                                    <option value=1>Dostępny</option>
+                                    <option value=2>Zarezerwowany</option>
+                                    <option value=2>Wydany</option>
+                                </select></p>
+                        <?php else: ?>
+                            <p style="color: <?= $statusColor ?>">Status: <?= htmlspecialchars($pet['_petadoptionstatus']['displayText'] ?? 'Nieznana') ?></p>
+                        <?php endif; ?>
                         Gatunek: <?= htmlspecialchars($pet['species']) ?><br>
                         Wiek: <?= htmlspecialchars($pet['age']) ?> lat(a)<br>
                         Opis: <?= htmlspecialchars(strlen($pet['description']) > 100 ? substr($pet['description'], 0, 100) . '...' : $pet['description']) ?>
